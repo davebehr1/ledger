@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"flag"
+	"fmt"
 	"log"
 	"os"
 	"payments/seed"
@@ -34,7 +35,9 @@ func main() {
 	if len(args) >= 1 {
 		switch args[0] {
 		case "seed":
+
 			newSeed.Execute()
+			fmt.Println("seeded database...")
 			os.Exit(0)
 		}
 	}

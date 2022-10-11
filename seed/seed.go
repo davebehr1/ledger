@@ -10,13 +10,15 @@ type Seed struct {
 }
 
 func (s Seed) Execute() {
-	q, err := ioutil.ReadFile("db/seeds/ledger_seed.sql")
-	if err != nil {
-		panic(err)
-	}
+	for _, file := range []string{"db/seeds/accounts_seed.sql", "db/seeds/transactions_seed.sql", "db/seeds/ledger_seed.sql"} {
+		q, err := ioutil.ReadFile(file)
+		if err != nil {
+			panic(err)
+		}
 
-	_, err = s.Db.Exec(string(q))
-	if err != nil {
-		panic(err)
+		_, err = s.Db.Exec(string(q))
+		if err != nil {
+			panic(err)
+		}
 	}
 }
