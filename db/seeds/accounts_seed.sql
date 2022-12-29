@@ -6,7 +6,7 @@ INSERT INTO  account_groups (name,type) VALUES ('user_wallet','credit_normal'),
 
 INSERT INTO  accounts (name,account_group_id) VALUES ('davids_wallet',1),
                                          ('cash',2),
-                                         ('revenue_from_fees',3),
-                                         ('card_processing_expenses',4),
+                                         ('revenue',3),
+                                         ('expenses',4),
                                          ('johns_wallet',1),
                                          ('janes_wallet',1);
