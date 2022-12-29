@@ -12,6 +12,8 @@ import (
 )
 
 func main() {
+	fmt.PrintlN("hello world")
+	//there we go bru
 	flag.Parse()
 	args := flag.Args()
 
